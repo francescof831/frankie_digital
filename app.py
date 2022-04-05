@@ -11,5 +11,5 @@ def blog():
     return render_template('blog.html')
 
 if __name__ == '__main__':
-    app.run(debug=True) #debug=True: refreshes page every time a change is made. turned off in production 
+    app.run(host='0.0.0.0') #debug=True: refreshes page every time a change is made. turned off in production 
     
