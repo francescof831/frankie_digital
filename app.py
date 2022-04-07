@@ -1,4 +1,7 @@
 from flask import Flask, render_template
+import logging
+logging.basicConfig(format = "[%(levelname)s] - %(asctime)s - %(message)s", level=logging.DEBUG, handlers = [logging.StreamHandler(), logging.FileHandler("log.txt")])
+logging.debug("Test <^_^>")
 
 app = Flask(__name__)
 
