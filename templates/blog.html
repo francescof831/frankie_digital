@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
-    <title>FrankieBlog</title>
-</head>
-<body>
-   <h1>Hi Brett</h1>
-   <p>Babysteps yo</p>
-   <a href={{url_for('index')}}>HOME</a>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>blog page</h1>
+  <p>
+    Welcome on my low effort blog page.</p>
+  <a href={{url_for('index')}}>HOME</a>
+{% endblock %}

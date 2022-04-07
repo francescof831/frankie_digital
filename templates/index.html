@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
-    <title>FrankieHub</title>
-</head>
-<body>
-   <h1>Welcome to FlaskApp</h1>
-   <p>This is a flask app now</p>
-   <a href={{url_for('blog')}}>BLOG</a>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>homepage</h1>
+  <img src="/static/images/frankiedigitalhomepagelogo.png" width="461" height="297">
+  <p class="important">
+    Welcome on my low effort homepage.
+  </p>
+  <a href={{url_for('blog')}}>BLOG</a>
+{% endblock %}
